@@ -10,19 +10,32 @@ export default class PokemonList extends Component {
 
     // ---- Async means it can run in the background simultaneously ----//
     async componentDidMount(){
-        const response = axios.get(this.state.url);
-        this.setState({pokemon: response.data['results']})
+        const res = await axios.get(this.state.url);
+        this.setState({pokemon: res.data['results']})
     }
 
     render() {
         return (
-            <div className='row'>
-                <PokemonCard/>
-                <PokemonCard/>
-                <PokemonCard/>
-                <PokemonCard/>
-                <PokemonCard/>
-            </div>
+    
+    // ---- React.Fragment basically removes the divs ----//
+            <React.Fragment>
+    
+    {/* ---- Created an if else statement which checks whether pokemon is null or not */}
+                {this.state.pokemon ? (
+                <div className='row'>
+                    {this.state.pokemon.map(pokemon => (
+                        <PokemonCard
+                            key={pokemon.name}
+                            name={pokemon.name}
+                            url={pokemon.url}
+                        />
+                    ))}
+                </div>
+                ) : (
+                    <h1>Loading Pokemon</h1>
+                )}
+                
+            </React.Fragment>
         )
     }
 }
