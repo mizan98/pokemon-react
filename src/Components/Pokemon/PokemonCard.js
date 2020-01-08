@@ -25,7 +25,7 @@ user-select: none;
 `;
 
 //---- Style for pokemon names link ----//
-const StyleLinked = styled(Link)`
+const StyledLink = styled(Link)`
 text-decoration: none;
 color: black;
 &:focus,
@@ -62,7 +62,7 @@ export default class PokemonCard extends Component {
         
         return (
             <div className='col-md-3 col-sm-6 mb-5'>
-            <StyleLinked to={`Pokemon/${this.state.pokemonIndex}`}>
+            <StyledLink to={`Pokemon/${this.state.pokemonIndex}`}>
                 <Card className='card'>
                     <h5 className='card-header'>{this.state.pokemonIndex}</h5>
                         {this.state.imageLoading ? (
@@ -83,7 +83,7 @@ export default class PokemonCard extends Component {
                             <h6 className='card-title'>{this.state.name.toLowerCase().split(" ").map(letter => letter.charAt(0).toUpperCase() + letter.substring(1)).join(" ")}</h6>
                         </div>
                     </Card>
-                </StyleLinked>
+                </StyledLink>
             </div>
         )
     }
