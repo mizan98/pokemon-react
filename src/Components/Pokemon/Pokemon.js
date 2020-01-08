@@ -109,7 +109,6 @@ export default class Pokemon extends Component {
 
         await axios.get(pokemonSepciesURL).then(res => {
             let description = '';
-            console.log(res.data);
             res.data.flavor_text_entries.some(flavor => {
                 if (flavor.language.name === 'en'){
                     description = flavor.flavor_text;
@@ -173,9 +172,37 @@ export default class Pokemon extends Component {
                                 <div className='float-right'>
                                     {this.state.types.map(type => (
                                     <span key={type}
-                                    className='badge badge-primary badge-pill mr-1'>{type.toLowerCase().split('-').map(s => s.charAt(0).toUpperCase() + s.substring(1)).join('')}
+                                    className='badge badge-primary badge-pill mr-1'
+                                       style={{backgroundColor: `#${TYPE_COLORS[type]}`, color: 'white'}} 
+                                    >
+                                    {type.toLowerCase().split('-').map(s => s.charAt(0).toUpperCase() + s.substring(1)).join('')}
                                     </span>
                                     ))}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className='card-body'>
+                        <div className='row align-items-center'>
+                            <div className='col-md-3'>
+                                <img src={this.state.imageURL} className='card-image-top rounded mx-auto mt-2'/>
+                            </div>
+                            <div className='col-md-9'>
+                                <h4 className='mx-auto'>{this.state.name.toLowerCase().split('-').map(s => s.charAt(0).toUpperCase() + s.substring(1)).join('')}</h4>
+                                <div className='row-align-items-center'>
+                                    <div className='col-12 col-md-3'>HP</div>
+                                        <div className='progress'>
+                                            <div className='progress-Bar' 
+                                            role='progressBar' 
+                                            style={{
+                                                width: `${this.state.stats.hp}%`
+                                            }}
+                                            aria-valuenow='25'
+                                            aria-valuemin='0'
+                                            aria-valuemax='100'>
+                                            <small>{this.state.stats.hp}</small>
+                                            </div>
+                                        </div>
                                 </div>
                             </div>
                         </div>
