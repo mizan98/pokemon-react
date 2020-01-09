@@ -342,25 +342,51 @@ export default class Pokemon extends Component {
                                         <div className='col-md-6'>
                                             <h6 className='float-right'>Gender Ratio:</h6>
                                         </div>
-                                        <div className='col-12 col-md-9'>
+                                        <div className='col-md-6'>
                                             <div className='progress'>
                                                 <div className='progress-Bar' 
                                                     role='progressBar' 
                                                     style={{
                                                         width: `${this.state.genderRatioFemale}%`,
                                                         backgroundColor: '#C2185B',
-                                                        textAlign: 'center'
+                                                        textAlign: 'center',
+                                                        color: '#FFFFFF'
                                                     }}
-                                                    aria-valuenow='25'
+                                                    aria-valuenow='15'
                                                     aria-valuemin='0'
                                                     aria-valuemax='100'>
                                                     <small>{this.state.genderRatioFemale}</small>
+                                                    <div className='progress-Bar' 
+                                                    role='progressBar' 
+                                                    style={{
+                                                        width: `${this.state.genderRatioMale}%`,
+                                                        backgroundColor: '#1976D2',
+                                                        textAlign: 'center',
+                                                        color: '#FFFFFF'
+                                                    }}
+                                                    aria-valuenow='30'
+                                                    aria-valuemin='0'
+                                                    aria-valuemax='100'>
+                                                    <small>{this.state.genderRatioMale}</small>
+                                                </div>
+                                                </div>
+                                        </div>
+                                        <div className='progress'>
+                                                <div className='progress-Bar' 
+                                                    role='progressBar' 
+                                                    style={{
+                                                        width: `${this.state.genderRatioMale}%`,
+                                                        backgroundColor: '#1976D2',
+                                                        textAlign: 'center',
+                                                        color: '#FFFFFF'
+                                                    }}
+                                                    aria-valuenow='30'
+                                                    aria-valuemin='0'
+                                                    aria-valuemax='100'>
+                                                    <small>{this.state.genderRatioMale}</small>
                                                 </div>
                                         </div>
                                     </div>
-                                        <div className='col-md-6'>
-                                            <h6 className='float-left'>{this.state.height} ft.</h6>
-                                        </div>
                                     </div>
                             </div>
                 </div>
