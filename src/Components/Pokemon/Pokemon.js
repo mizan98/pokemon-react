@@ -306,6 +306,7 @@ export default class Pokemon extends Component {
                             </div>
                             <div className='row mt-1'>
                                 <div className='col'>
+                                    <h5 className='p-2'>Description</h5>
                                     <p className='p-2'>{this.state.description}</p>
                                 </div>
                             </div>
@@ -356,19 +357,6 @@ export default class Pokemon extends Component {
                                                     aria-valuemin='0'
                                                     aria-valuemax='100'>
                                                     <small>{this.state.genderRatioFemale}</small>
-                                                    <div className='progress-Bar' 
-                                                    role='progressBar' 
-                                                    style={{
-                                                        width: `${this.state.genderRatioMale}%`,
-                                                        backgroundColor: '#1976D2',
-                                                        textAlign: 'center',
-                                                        color: '#FFFFFF'
-                                                    }}
-                                                    aria-valuenow='30'
-                                                    aria-valuemin='0'
-                                                    aria-valuemax='100'>
-                                                    <small>{this.state.genderRatioMale}</small>
-                                                </div>
                                                 </div>
                                         </div>
                                         <div className='progress'>
