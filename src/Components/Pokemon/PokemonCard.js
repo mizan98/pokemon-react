@@ -70,6 +70,7 @@ export default class PokemonCard extends Component {
                                 src={Spinner}
                                 style={{width: '5em', height: '5em'}}
                                 className='card-img-top rounded nx-auto d-block mt-2'
+                                alt=''
                             />
                             ) : null}
 

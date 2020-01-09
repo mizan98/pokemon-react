@@ -159,7 +159,6 @@ export default class Pokemon extends Component {
     }
 
     render() {
-        console.log('loading');
         return (
             <div className='col'>
                 <div className='card'>
@@ -185,7 +184,7 @@ export default class Pokemon extends Component {
                     <div className='card-body'>
                         <div className='row align-items-center'>
                             <div className='col-md-3'>
-                                <img src={this.state.imageURL} className='card-image-top rounded mx-auto mt-2'/>
+                                <img src={this.state.imageURL} className='card-img-top rounded mx-auto mt-2'/>
                             </div>
                             <div className='col-md-9'>
                                 <h4 className='mx-auto'>{this.state.name.toLowerCase().split('-').map(s => s.charAt(0).toUpperCase() + s.substring(1)).join('')}</h4>
@@ -202,7 +201,92 @@ export default class Pokemon extends Component {
                                                     aria-valuemin='0'
                                                     aria-valuemax='100'>
                                                     <small>{this.state.stats.hp}</small>
-                                            </div>
+                                                </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className='row align-items-center'>
+                                    <div className='col-12 col-md-3'>HP</div>
+                                        <div className='col-12 col-md-9'>
+                                            <div className='progress'>
+                                                <div className='progress-Bar' 
+                                                    role='progressBar' 
+                                                    style={{
+                                                        width: `${this.state.stats.hp}%`
+                                                    }}
+                                                    aria-valuenow='25'
+                                                    aria-valuemin='0'
+                                                    aria-valuemax='100'>
+                                                    <small>{this.state.stats.hp}</small>
+                                                </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className='row align-items-center'>
+                                    <div className='col-12 col-md-3'>HP</div>
+                                        <div className='col-12 col-md-9'>
+                                            <div className='progress'>
+                                                <div className='progress-Bar' 
+                                                    role='progressBar' 
+                                                    style={{
+                                                        width: `${this.state.stats.hp}%`
+                                                    }}
+                                                    aria-valuenow='25'
+                                                    aria-valuemin='0'
+                                                    aria-valuemax='100'>
+                                                    <small>{this.state.stats.hp}</small>
+                                                </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className='row align-items-center'>
+                                    <div className='col-12 col-md-3'>HP</div>
+                                        <div className='col-12 col-md-9'>
+                                            <div className='progress'>
+                                                <div className='progress-Bar' 
+                                                    role='progressBar' 
+                                                    style={{
+                                                        width: `${this.state.stats.hp}%`
+                                                    }}
+                                                    aria-valuenow='25'
+                                                    aria-valuemin='0'
+                                                    aria-valuemax='100'>
+                                                    <small>{this.state.stats.hp}</small>
+                                                </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className='row align-items-center'>
+                                    <div className='col-12 col-md-3'>HP</div>
+                                        <div className='col-12 col-md-9'>
+                                            <div className='progress'>
+                                                <div className='progress-Bar' 
+                                                    role='progressBar' 
+                                                    style={{
+                                                        width: `${this.state.stats.hp}%`
+                                                    }}
+                                                    aria-valuenow='25'
+                                                    aria-valuemin='0'
+                                                    aria-valuemax='100'>
+                                                    <small>{this.state.stats.hp}</small>
+                                                </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className='row align-items-center'>
+                                    <div className='col-12 col-md-3'>HP</div>
+                                        <div className='col-12 col-md-9'>
+                                            <div className='progress'>
+                                                <div className='progress-Bar' 
+                                                    role='progressBar' 
+                                                    style={{
+                                                        width: `${this.state.stats.hp}%`
+                                                    }}
+                                                    aria-valuenow='25'
+                                                    aria-valuemin='0'
+                                                    aria-valuemax='100'>
+                                                    <small>{this.state.stats.hp}</small>
+                                                </div>
                                         </div>
                                     </div>
                                 </div>
