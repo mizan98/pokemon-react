@@ -13,6 +13,7 @@ const Sprite = styled.img `
 `;
 
 const Card = styled.div `
+opacity: 0.95;
 box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 &:hover {
@@ -77,9 +78,18 @@ export default class PokemonCard extends Component {
                         <Sprite className='card-img-top rounded mx-auto mt-2'
                             onLoad={() => {this.setState({imageLoading: false})}}
                             onError={() => {this.setState({tooManyRequests: true})}}
-                            src={this.state.imageURL}
+                            style={
+                                this.state.tooManyRequests ? {display: 'none'}
+                                : this.state.imageLoading ? null : {display: 'block'}
+                            }
                             />
-
+                            {this.state.tooManyRequests ? ( 
+                                <h6 className='mx-auto'>
+                                    <span className='badge badge-danger mt-2'>
+                                        To Many Requests
+                                    </span>
+                                </h6>
+                            ) : null}
                         <div className='card-body mx-auto'>
                             <h6 className='card-title'>{this.state.name.toLowerCase().split(" ").map(letter => letter.charAt(0).toUpperCase() + letter.substring(1)).join(" ")}</h6>
                         </div>
