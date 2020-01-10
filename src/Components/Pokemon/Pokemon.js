@@ -48,6 +48,7 @@ export default class Pokemon extends Component {
     };
 
     async componentDidMount(){
+        //---- Params used to change the index depending on the API ----//
         const { pokemonIndex } = this.props.match.params;
 
         //---- urls for pokemon ----// // ---- Index URL added too ----//

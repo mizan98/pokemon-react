@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import PokemonCard from './PokemonCard'
 import axios from 'axios'
+import Spinner from './spinner.gif'
 
 export default class PokemonList extends Component {
     state = {
@@ -32,7 +33,7 @@ export default class PokemonList extends Component {
                     ))}
                 </div>
                 ) : (
-                    <h1>Loading Pokemon</h1>
+                    <div>{Spinner}</div>
                 )}
                 
             </React.Fragment>
