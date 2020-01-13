@@ -83,6 +83,8 @@ export default class Pokemon extends Component {
                 case 'special-defense':
                     specialDefense = stat['base_stat']
                     break;
+
+                   
             }
         })
 
@@ -195,14 +197,14 @@ export default class Pokemon extends Component {
                                             <div className='progress'>
                                                 <div className='progress-Bar' 
                                                     role='progressBar' 
+                                                    aria-valuenow='25'
+                                                    aria-valuemin='0'
+                                                    aria-valuemax='100'
                                                     style={{
                                                         width: `${this.state.stats.hp}%`,
                                                         backgroundColor: '#74C236',
                                                         textAlign: 'center'
-                                                    }}
-                                                    aria-valuenow='25'
-                                                    aria-valuemin='0'
-                                                    aria-valuemax='100'>
+                                                    }}>
                                                     <small>{this.state.stats.hp}</small>
                                                 </div>
                                         </div>

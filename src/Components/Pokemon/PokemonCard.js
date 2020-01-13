@@ -9,7 +9,6 @@ import { Link } from 'react-router-dom';
 const Sprite = styled.img `
     width: 5em;
     height: 5em;
-    display: none;
 `;
 
 const Card = styled.div `
@@ -70,7 +69,7 @@ export default class PokemonCard extends Component {
                             <img 
                                 src={Spinner}
                                 style={{width: '5em', height: '5em'}}
-                                className='card-img-top rounded nx-auto d-block mt-2'
+                                className='card-img-top rounded mx-auto d-block mt-2'
                                 alt=''
                             />
                             ) : null}
