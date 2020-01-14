@@ -6,8 +6,8 @@ import { Link } from 'react-router-dom';
 
 
 // ---- styling of the cards done here ----//
-const Sprite = styled.img `
-    width: 5em;
+const Sprite = styled.img 
+`
     height: 5em;
 `;
 
