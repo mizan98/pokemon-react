@@ -6,9 +6,9 @@ import { Link } from 'react-router-dom';
 
 
 // ---- styling of the cards done here ----//
-const Sprite = styled.img 
-`
-    height: 5em;
+const Sprite = styled.img `
+    width: 5em;
+    display: false;
 `;
 
 const Card = styled.div `
@@ -76,7 +76,6 @@ export default class PokemonCard extends Component {
 
                         <Sprite className='card-img-top rounded mx-auto mt-2'
                             onLoad={() => {this.setState({imageLoading: false})}}
-                            onError={() => {this.setState({tooManyRequests: true})}}
                             src={this.state.imageURL}
                             />
 
