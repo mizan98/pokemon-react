@@ -1,4 +1,5 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import SearchBar from './Searchbar';
 
 export default class NavBar extends Component {
     render() {
@@ -6,6 +7,7 @@ export default class NavBar extends Component {
             <div>
                 <nav className='navbar navbar-expand-md fixed-top'>
                     <a className='navbar-brand col-sm-3 col-md-2 mr-0 align-items-center'>Pokedex</a>
+                    {/* <SearchBar/> */}
                 </nav>
             </div>
         )

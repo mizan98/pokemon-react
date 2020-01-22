@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-
-import styled from 'styled-components'
-import Spinner from './spinner.gif'
+import styled from 'styled-components';
+import Spinner from './spinner.gif';
 import { Link } from 'react-router-dom';
 
 
