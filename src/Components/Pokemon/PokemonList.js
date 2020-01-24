@@ -3,7 +3,6 @@ import PokemonCard from './PokemonCard';
 import axios from 'axios';
 import Spinner from './spinner.gif';
 
-
 export default class PokemonList extends Component {
     state = {
         url: 'https://pokeapi.co/api/v2/pokemon/?limit=151',
@@ -23,9 +22,9 @@ export default class PokemonList extends Component {
 
         let pokemonNames = this.state.pokemon.filter( pokemon => {
             return pokemon.name.toLowerCase().indexOf(searchedPokemon) !== -1;
+            
         });
-
-        console.log(pokemonNames);
+        this.setState ({pokemon: this.state.pokemonNames})        
     }
 
     render() {

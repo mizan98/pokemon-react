@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import SearchBar from './Searchbar';
+
 
 export default class NavBar extends Component {
     render() {
